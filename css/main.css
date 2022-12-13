@@ -264,7 +264,7 @@ body {
   }
 }
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .header__inner {
     display: flex;
     align-items: center;
@@ -296,7 +296,7 @@ nav {
   display: none;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   nav {
     display: block;
   }
@@ -387,7 +387,7 @@ nav {
   fill: #2196F3;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .menu-toggle {
     display: none;
   }
@@ -453,10 +453,15 @@ button {
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+button:hover, button:focus {
+  background-color: #2196F3;
+  color: #fff;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
 
 .hero {
   padding: 118px 60px;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/desktop/hero.jpg");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/desktop/hero.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -468,10 +473,10 @@ button {
 
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    background-image: url("../../images/desktop/hero-2x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/desktop/hero-2x.jpg");
   }
 }
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .hero {
     padding: 200px 0;
     max-width: 1600px;
@@ -494,7 +499,7 @@ h1 {
   margin-bottom: 30px;
 }
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   h1 {
     font-size: 44px;
     line-height: 1.36;
@@ -514,7 +519,7 @@ h1 {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .hero__btn {
     padding: 10px 32px;
   }
@@ -527,19 +532,19 @@ h1 {
   margin-bottom: 30px;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .columns__list {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
   }
   .columns__item {
-    width: 354px;
+    width: calc((100% - 60px) / 2);
   }
 }
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .columns__item {
-    width: 270px;
+    width: calc((100% - 90px) / 4);
   }
 }
 .columns__dekor {
@@ -573,7 +578,7 @@ p {
   display: none;
 }
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .images {
     display: block;
   }
@@ -653,20 +658,20 @@ h2 {
   letter-spacing: 0.03em;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .cards {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
   }
   .cards__card {
-    width: 354px;
+    width: calc((100% - 60px) / 2);
     margin-bottom: 0;
   }
 }
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .cards__card {
-    width: 270px;
+    width: calc((100% - 90px) / 4);
   }
 }
 .cards__contakt {
@@ -720,16 +725,24 @@ h3 {
 }
 
 .clients__item {
-  width: 210px;
+  width: calc((100% - 30px) / 2);
 }
 
+@media screen and (min-width: 768px) {
+  .clients__item {
+    width: calc((100% - 60px) / 3);
+  }
+}
 .clients__link {
   border: 1px solid #AFB1B8;
   border-radius: 4px;
   fill: #AFB1B8;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: block;
-  padding: 16px 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 92px;
 }
 .clients__link:hover, .clients__link:focus {
   border-color: #2196F3;
@@ -740,7 +753,7 @@ h3 {
   color: currentColor;
 }
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .clients__item {
     width: 170px;
   }
@@ -752,43 +765,48 @@ main {
   border-top: 1px solid #ECECEC;
 }
 
-@media (min-width: 480px) {
+@media screen and (min-width: 480px) {
   .control {
     padding-bottom: 60px;
     padding-top: 60px;
   }
 }
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .control {
     padding-bottom: 60px;
     padding-top: 60px;
   }
 }
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .control {
     padding-bottom: 94px;
     padding-top: 94px;
   }
 }
-@media (min-width: 480px) {
+.control__list {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 480px) {
   .control__list {
-    padding-bottom: 40px;
+    margin-bottom: 40px;
   }
 }
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .control__list {
-    padding-bottom: 40px;
+    margin-bottom: 40px;
   }
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .control__list {
-    display: flex;
     justify-content: center;
   }
 }
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .control__list {
-    padding-bottom: 50px;
+    margin-bottom: 50px;
   }
 }
 .all {
@@ -803,7 +821,7 @@ main {
   position: relative;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .all__cards {
     width: 354px;
   }
@@ -814,7 +832,7 @@ main {
   width: 450px;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .all__hover {
     width: 354px;
   }
@@ -838,12 +856,12 @@ main {
   transform: translateY(0);
 }
 
-@media (min-width: 480px) {
+@media screen and (min-width: 480px) {
   .all__text {
     transform: translateY(358px);
   }
 }
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .all__text {
     transform: translateY(358px);
   }
@@ -877,12 +895,6 @@ main {
   letter-spacing: 0.06em;
   text-align: start;
   margin-bottom: 4px;
-}
-
-.control__item {
-  margin-right: 8px;
-  display: inline-block;
-  margin-bottom: 15px;
 }
 
 footer {
@@ -942,7 +954,7 @@ footer p {
   padding-top: 60px;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .networks {
     padding: 0;
   }
@@ -968,7 +980,7 @@ footer p {
   margin-bottom: 20px;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .footer__mail input {
     width: 450px;
   }
@@ -986,7 +998,7 @@ footer p {
   background-color: #2196F3;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .footer__btn {
     display: block;
     margin: 0 auto;
@@ -998,7 +1010,7 @@ footer p {
   margin-left: 10px;
 }
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   footer ul {
     display: block;
   }
