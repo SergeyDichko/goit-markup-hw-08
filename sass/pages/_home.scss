@@ -1,6 +1,6 @@
 .hero {
     padding: 118px 60px;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/img16.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/desktop/hero.jpg);
 
     background-repeat: no-repeat;
     background-position: center;
@@ -9,6 +9,16 @@
     display: flex;
     justify-content: center;
     text-align: center;
+
+
+    @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+    .hero {
+        background-image: url("/images/desktop/hero-2x.jpg");
+  }
+}
 }
 @media (min-width : 1200px){
     .hero{
@@ -284,10 +294,10 @@ h3 {
 .clients {
     padding: 60px 15px;
 }
-.clients ul{
+.clients__list{
     display: flex;
     flex-wrap: wrap;
-    
+    justify-content: center;
     gap: 30px;
 
 }
@@ -308,10 +318,6 @@ h3 {
   
 
     padding: 16px 52px;
-
-    &:last-child {
-        margin-right: 0;
-    }
 
     &:hover,
     &:focus {
